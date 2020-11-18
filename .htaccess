@@ -1,0 +1,6 @@
+RewriteEngine on
+
+##RewriteRule ^([^/]+)/? index.php?url=$1 [L,QSA] 
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/? index.php?url=$1 [L,QSA]

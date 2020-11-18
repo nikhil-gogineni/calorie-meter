@@ -1,0 +1,82 @@
+body{
+    margin: 0px;
+}
+
+/* header css */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #1070A7;
+    color: white;
+    height: 60px;
+    box-shadow: 0px 3px 3px #00000030;
+}
+
+.logo{
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0px;
+}
+
+.nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav-items li{
+    list-style-type: none;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.nav-items li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* footer css */
+.footer-container{
+    min-height: 200px;
+    background-color: #2D3338;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-tagline{
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+
+.footer-container ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-container li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.footer-container a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* main css */
+
+.main{
+    min-height: calc(100vh - 281px);    
+}
