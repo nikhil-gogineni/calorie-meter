@@ -1,5 +1,5 @@
 # Calorie Meter
-Web application which helps people in tracking the daily intake calories to reach their weight goals.
+A web application that helps people in tracking daily intake calories to reach their weight goals.
 
 Calorie Meter is built using HTML, CSS & PHP following the MVC architecture.
 
@@ -20,11 +20,11 @@ Cheers! You are good to go!
 # Project Details
 
 1. Login Screen
-   - Login screen enables the multi user functionality.
+   - Login screen enables the multi-user functionality.
 2. Home screen
    - Provision to change the user.
    - Fields to enter the calorie intake one after the other.
    - Provision to upload a file to add the calories.
-   - Table which shows the current day calory intake.
+   - A Table which shows the current day calory intake.
 3. Calorie Record screen
    - Shows the entire record of calorie intake each day in a table.
