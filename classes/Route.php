@@ -9,8 +9,6 @@ class Route
         if (isset($_GET['url'])) {
             if ($_GET['url'] == $route) {
                 $function->__invoke();
-            }else{
-                require_once "views/NotFound.php";
             }
         }
     }
