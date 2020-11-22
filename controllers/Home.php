@@ -5,11 +5,21 @@ class Home extends Controller {
     public static $todayCalorieData = [];
     
     public static function onLoad($viewName){
+
         
         // Redirects to Sign in page if no user found
         if(!isset($_COOKIE['user_email'])){
             header('Location: sign-in');
         }
+        if(isset($_SERVER['QUERY_STRING'])){
+            $splitQuery = explode('=', $_SERVER['QUERY_STRING']);
+            if(sizeOf($splitQuery) == 2){
+                if($splitQuery[0] == 'delete'){
+                    self::deleteRecord($splitQuery[1]);
+                }
+            }
+        }
+        
         
         if(isset($_POST['food'])){
             self::updateRecord($_POST['food'], $_POST['calories']);
@@ -30,6 +40,13 @@ class Home extends Controller {
         $query = "INSERT into calorie_count ( user_id, date, item, calories) VALUES (:user_id, :current_date, :food, :calories)";
         $queryParams = array("user_id" => $_COOKIE['user_id'], "current_date" => self::getCurrentDate(), "food" => $food, "calories" => $calories);
         Database::query($query, $queryParams);
+    }
+
+    public static function deleteRecord($id){
+        $query = "DELETE from calorie_count where id=:id";
+        $queryParams = array("id" => $id);
+        Database::query($query, $queryParams);
+        header("Location: index.php");
     }
 
     public static function getCurrentDate(){

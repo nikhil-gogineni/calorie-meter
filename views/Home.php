@@ -35,13 +35,14 @@
         if (sizeOf(self::$todayCalorieData) == 0) {
             echo "<div class='no-calories-warning'>You don't have any calories recorded yet!</div>";
         } else {
-            $tableString = "<table id='calories-table'><thead><th>Item</th><th>Calories</th></thead><tbody>";
+            $tableString = "<table id='calories-table'><thead><th>Item</th><th>Calories</th><th>Action</th></thead><tbody>";
             $totalCalories = 0;
             foreach (self::$todayCalorieData as $val) {
+                $deleteLink = "<a class='delete-link' href='index.php?delete=".$val[0]."'>Delete</a>";
                 $label = $val[3];
                 $calory = $val[4];
                 $totalCalories = $totalCalories + $calory;
-                $tableString = $tableString . "<tr><td>" . $label . "</td><td>" . $calory . "</td></tr>";
+                $tableString = $tableString . "<tr><td>" . $label . "</td><td>" . $calory . "</td><td>". $deleteLink . "</td></tr>";
             };
             $tableString = $tableString . "</tbody></table>";
             echo "<div class='total-calories'>Total Calories: " . $totalCalories . " cals.</div>";
