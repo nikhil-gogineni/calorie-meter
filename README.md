@@ -28,3 +28,7 @@ Cheers! You are good to go!
    - A Table which shows the current day calory intake.
 3. Calorie Record screen
    - Shows the entire record of calorie intake each day in a table.
+
+
+![alt text](https://github.com/nikhil-gogineni/calorie-meter/blob/main/demo-screenshot.png?raw=true)
+
